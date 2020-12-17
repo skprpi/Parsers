@@ -16,8 +16,8 @@ def normalize_number(string):
 
 
 def write_csv(data):
-    with open('plugins.csv', 'a') as file:
-        writer = csv.writer(file)
+    with open('plugins.csv', 'a', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
         writer.writerow((data['name'],
                          data['url'],
                          data['reviews']))
