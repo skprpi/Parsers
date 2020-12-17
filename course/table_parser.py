@@ -4,9 +4,9 @@ import csv
 
 
 def write_csv(data):
-    with open('statistic.csv', 'a') as file:
-        writer = csv.writer(file)
-        writer.writerow((data['name'], data['url'], data['price']))
+    with open('statistic.csv', 'a', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        writer.writerow([data['name'], data['url'], data['price']])
 
 
 def get_html(url):
