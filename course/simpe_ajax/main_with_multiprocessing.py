@@ -1,11 +1,14 @@
 import csv
 from datetime import datetime
 from multiprocessing import Pool
+from time import sleep
 
 import requests
 
 
 def get_html(url):
+    """sleep - замедляет парсинг sleep(1) - на 1 секунду"""
+    # sleep(1)
     response = requests.get(url)
     return response.text
 
